@@ -1,0 +1,18 @@
+<html>
+  <head>
+    <title>The Gossip Project</title>
+  </head>
+  <body>
+    <h1>Liste des potins :)</h1>
+    <a href="/gossips/new/">Ajouter un potin </a>
+    
+    <% gossips.each_with_index do |gossip, index| %> #each_with_index est une méthode qui itère à travers chaque élément de la collection tout en fournissant un index correspondant à chaque élément.
+      <p>
+         <a href="/gossips/<%= index %>/"><%= gossip.author %></a><br/>
+        <%= gossip.content %>
+      </p>
+    <% end %>
+
+  </body>
+</html>
+
